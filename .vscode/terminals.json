@@ -1,0 +1,17 @@
+{
+  "autorun": true,
+  "terminals": [
+    {
+      "name": "Server",
+      "commands": ["cd server", "nodemon"],
+      "execute": true,
+      "open": true,
+      "focus": false
+    },
+    {
+      "name": "Client",
+      "commands": ["cd client/src", "ng build --watch"],
+      "execute": true
+    }
+  ]
+}

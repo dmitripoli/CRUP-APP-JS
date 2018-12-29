@@ -1,0 +1,14 @@
+<h1 mat-dialog-title>{{ data.actionTitle }}</h1>
+<div mat-dialog-content>
+  <form *ngIf="formData" novalidate [formGroup]="formData">
+    <div *ngFor="let prop of dataProps">
+      <mat-form-field class="max--width">
+        <input matInput [placeholder]="prop" [formControlName]="prop" />
+      </mat-form-field>
+    </div>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="Cancel()">Cancel</button>
+  <button mat-button (click)="closeDialog()" cdkFocusInitial>Save</button>
+</div>
